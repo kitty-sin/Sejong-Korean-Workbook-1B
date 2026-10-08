@@ -1,0 +1,187 @@
+{
+  "bookTitle": "세종한국어 익힘책 1B (Sejong Korean Workbook 1B)",
+  "edition": "2022 Revised Edition",
+  "publisher": "National Institute of Korean Language & King Sejong Institute Foundation",
+  "totalPages": 102,
+  "pageOffset": 2,
+  "units": [
+    {
+      "id": "unit_cover",
+      "unitNumber": -1,
+      "title": "封面與書名頁 (Cover & Title)",
+      "koreanTitle": "표지 및 서지",
+      "startPage": 1,
+      "endPage": 4
+    },
+    {
+      "id": "unit_preface",
+      "unitNumber": -2,
+      "title": "發刊詞、序言與目錄 (Preface & Contents)",
+      "koreanTitle": "발간사, 머리말 및 차례",
+      "startPage": 5,
+      "endPage": 7
+    },
+    {
+      "id": "unit_01",
+      "unitNumber": 1,
+      "title": "第 1 課：무슨 음식을 좋아해요? (喜歡什麼食物？)",
+      "koreanTitle": "무슨 음식을 좋아해요?",
+      "startPage": 8,
+      "endPage": 13,
+      "bookStartPage": 6,
+      "bookEndPage": 11,
+      "listeningPage": 11
+    },
+    {
+      "id": "unit_02",
+      "unitNumber": 2,
+      "title": "第 2 課：도서관에 책을 빌리러 가요 (去圖書館借書)",
+      "koreanTitle": "도서관에 책을 빌리러 가요",
+      "startPage": 14,
+      "endPage": 19,
+      "bookStartPage": 12,
+      "bookEndPage": 17,
+      "listeningPage": 17
+    },
+    {
+      "id": "unit_03",
+      "unitNumber": 3,
+      "title": "第 3 課：백화점에서 쇼핑할 거예요 (打算在百貨公司購物)",
+      "koreanTitle": "백화점에서 쇼핑할 거예요",
+      "startPage": 20,
+      "endPage": 25,
+      "bookStartPage": 18,
+      "bookEndPage": 23,
+      "listeningPage": 23
+    },
+    {
+      "id": "unit_04",
+      "unitNumber": 4,
+      "title": "第 4 課：더 큰 사이즈는 없어요? (沒有再大一點的尺寸嗎？)",
+      "koreanTitle": "더 큰 사이즈는 없어요?",
+      "startPage": 26,
+      "endPage": 31,
+      "bookStartPage": 24,
+      "bookEndPage": 29,
+      "listeningPage": 29
+    },
+    {
+      "id": "unit_05",
+      "unitNumber": 5,
+      "title": "第 5 課：세종식당이 어디에 있어요? (世宗餐廳在哪裡？)",
+      "koreanTitle": "세종식당이 어디에 있어요?",
+      "startPage": 32,
+      "endPage": 37,
+      "bookStartPage": 30,
+      "bookEndPage": 35,
+      "listeningPage": 35
+    },
+    {
+      "id": "unit_06",
+      "unitNumber": 6,
+      "title": "第 6 課：한국미술관까지 어떻게 가요? (到韓國美術館要怎麼去？)",
+      "koreanTitle": "한국미술관까지 어떻게 가요?",
+      "startPage": 38,
+      "endPage": 43,
+      "bookStartPage": 36,
+      "bookEndPage": 41,
+      "listeningPage": 41
+    },
+    {
+      "id": "unit_07",
+      "unitNumber": 7,
+      "title": "第 7 課：제주도에 가려고 해요 (打算去濟州島)",
+      "koreanTitle": "제주도에 가려고 해요",
+      "startPage": 44,
+      "endPage": 49,
+      "bookStartPage": 42,
+      "bookEndPage": 47,
+      "listeningPage": 47
+    },
+    {
+      "id": "unit_08",
+      "unitNumber": 8,
+      "title": "第 8 課：지난번 여행보다 좋았어요 (比上次的旅行更好)",
+      "koreanTitle": "지난번 여행보다 좋았어요",
+      "startPage": 50,
+      "endPage": 55,
+      "bookStartPage": 48,
+      "bookEndPage": 53,
+      "listeningPage": 53
+    },
+    {
+      "id": "unit_09",
+      "unitNumber": 9,
+      "title": "第 9 課：집에서 푹 쉬어야 돼요 (要在家好好休息才行)",
+      "koreanTitle": "집에서 푹 쉬어야 돼요",
+      "startPage": 56,
+      "endPage": 61,
+      "bookStartPage": 54,
+      "bookEndPage": 59,
+      "listeningPage": 59
+    },
+    {
+      "id": "unit_10",
+      "unitNumber": 10,
+      "title": "第 10 課：학교에 가기 전에 수영을 해요 (上學前先游泳)",
+      "koreanTitle": "학교에 가기 전에 수영을 해요",
+      "startPage": 62,
+      "endPage": 67,
+      "bookStartPage": 60,
+      "bookEndPage": 65,
+      "listeningPage": 65
+    },
+    {
+      "id": "unit_11",
+      "unitNumber": 11,
+      "title": "第 11 課：한국 음식을 만들 수 있어요? (會做韓國菜嗎？)",
+      "koreanTitle": "한국 음식을 만들 수 있어요?",
+      "startPage": 68,
+      "endPage": 73,
+      "bookStartPage": 66,
+      "bookEndPage": 71,
+      "listeningPage": 71
+    },
+    {
+      "id": "unit_12",
+      "unitNumber": 12,
+      "title": "第 12 課：저는 지니 씨에게 펜을 선물할 거예요 (打算送筆給智妮)",
+      "koreanTitle": "저는 지니 씨에게 펜을 선물할 거예요",
+      "startPage": 74,
+      "endPage": 79,
+      "bookStartPage": 72,
+      "bookEndPage": 77,
+      "listeningPage": 77
+    },
+    {
+      "id": "unit_scripts",
+      "unitNumber": 13,
+      "title": "附錄：듣기 지문 (聽力文本)",
+      "koreanTitle": "듣기 지문",
+      "startPage": 80,
+      "endPage": 85,
+      "bookStartPage": 78,
+      "bookEndPage": 83
+    },
+    {
+      "id": "unit_answers",
+      "unitNumber": 14,
+      "title": "附錄：모범 답안 (標準解答)",
+      "koreanTitle": "모범 답안",
+      "startPage": 86,
+      "endPage": 99,
+      "bookStartPage": 84,
+      "bookEndPage": 97
+    },
+    {
+      "id": "unit_appendix",
+      "unitNumber": 15,
+      "title": "附錄：자료 출처 및 판권 (版權與來源)",
+      "koreanTitle": "자료 출처 및 판권",
+      "startPage": 100,
+      "endPage": 102,
+      "bookStartPage": 98,
+      "bookEndPage": 100
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+  <title>세종한국어 익힘책 1B (Sejong Korean Workbook 1B)</title>
+  
+  <!-- PWA Meta -->
+  <meta name="theme-color" content="#FFFDF9">
+  <meta name="description" content="韓國世宗學堂基金會《세종한국어 익힘책 1B》官方原裝翻頁電子書與 KittyVoice 雙軌互動學習系統">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+
+  <!-- 樣式庫 -->
+  <link rel="stylesheet" href="src/css/pastel.css">
+  <link rel="stylesheet" href="src/css/reader.css">
+  <link rel="stylesheet" href="src/css/overlay.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- 頂部控制導航列 (Header Bar - 48px/60px 簡約導航列) -->
+    <header class="reader-header">
+      <div class="brand-section">
+        <span class="brand-logo">📝</span>
+        <div>
+          <div class="brand-title">세종한국어 익힘책 1B <span style="font-size: 0.8rem; font-weight: 500; color: #888;">· 官方練習冊</span></div>
+          <div class="brand-subtitle">世宗韓國語 練習冊 1B 官方原裝翻頁電子書 · KittyVoice 三段速</div>
+        </div>
+      </div>
+
+      <!-- 中間快速單元跳轉 -->
+      <div class="header-center-controls">
+        <select id="chapterSelect" class="chapter-select" title="選擇章節跳轉">
+          <option value="1">載入中...</option>
+        </select>
+      </div>
+
+      <!-- 右側工具與模式切換 -->
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button class="pastel-btn" id="toggleSpreadBtn" style="padding: 6px 12px; font-size: 0.82rem;">
+          📖 雙頁模式
+        </button>
+
+        <button class="pastel-btn" id="toggleFullscreenBtn" style="padding: 6px 10px; font-size: 0.82rem;">
+          ⤢ 全螢幕
+        </button>
+      </div>
+    </header>
+
+    <!-- 模式 A：電子書翻頁閱讀主視窗 (Reader Viewport) -->
+    <main class="reader-viewport" id="readerViewport">
+      <!-- 左右浮動翻頁箭頭 (34px/48px 貼邊固定) -->
+      <button class="flip-arrow-btn prev-btn" id="prevPageBtn" title="上一頁 (←)">‹</button>
+      <button class="flip-arrow-btn next-btn" id="nextPageBtn" title="下一頁 (→)">›</button>
+
+      <!-- 書本主舞台 (滿版展開，鎖定 589/807 長寬比) -->
+      <div class="book-stage" id="bookStage">
+        <div class="book-wrapper spread-mode" id="bookWrapper">
+          <!-- 左頁容器 -->
+          <div class="book-page left-page" id="pageLeftContainer">
+            <img class="page-img" id="leftPageImg" src="" alt="左頁">
+            <div class="page-hotspots-layer" id="leftHotspots"></div>
+          </div>
+
+          <!-- 右頁容器 -->
+          <div class="book-page right-page" id="pageRightContainer">
+            <img class="page-img" id="rightPageImg" src="" alt="右頁">
+            <div class="page-hotspots-layer" id="rightHotspots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 固定語音播放膠囊列 (Fixed Mini Audio Dock - 課本 100% 零遮擋) -->
+      <div class="audio-dock-container" id="audioDockContainer">
+        <div class="audio-dock-pill">
+          <!-- 關閉按鈕 -->
+          <button class="dock-close-btn" id="dockCloseBtn" title="關閉播放列">✕</button>
+
+          <!-- 播放資訊 (韓文原句 + 繁體中文) -->
+          <div class="dock-info">
+            <div class="dock-korean" id="dockKorean">🎧 點擊課文發音</div>
+            <div class="dock-trans" id="dockTrans">點擊課文熱區或耳機開始播放</div>
+          </div>
+
+          <!-- 核心控制項：暫停 / 重播 -->
+          <div class="dock-actions">
+            <button class="dock-action-btn pause-resume-btn" id="dockPauseResumeBtn" title="暫停或繼續播放">
+              <span class="dock-action-icon">⏸️</span>
+              <span class="dock-action-label">暫停</span>
+            </button>
+            <button class="dock-action-btn replay-btn" id="dockReplayBtn" title="從頭重新播放">
+              <span class="dock-action-icon">🔄</span>
+              <span class="dock-action-label">重播</span>
+            </button>
+          </div>
+
+          <!-- 三段速列 -->
+          <div class="dock-speeds">
+            <button class="dock-speed-pill" data-speed="0.3">0.3x</button>
+            <button class="dock-speed-pill" data-speed="0.7">0.7x</button>
+            <button class="dock-speed-pill active" data-speed="1.0">1.0x</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部浮動膠囊控制列 (Fixed 鎖定於膠捲上方) -->
+      <div class="floating-bottom-bar">
+        <div class="page-indicator" id="pageIndicatorContainer">
+          <span>第</span>
+          <input type="number" id="pageInput" class="page-jump-input" min="1" max="102" value="1">
+          <span id="pageSpanExtra" style="display: none;"></span>
+          <span id="totalPagesLabel">/ 102 頁</span>
+        </div>
+        <div style="height: 18px; width: 1px; background: var(--border-soft);"></div>
+        <div class="speed-selector-group">
+          <button class="speed-btn" data-speed="0.3" title="逐音節口型拆解">0.3x</button>
+          <button class="speed-btn" data-speed="0.7" title="慢速跟讀練習">0.7x</button>
+          <button class="speed-btn active" data-speed="1.0" title="自然正常語速">1.0x</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 模式 B：粉彩輔助學習大廳 (Study Viewport) -->
+    <div class="study-viewport" id="studyViewport" style="display: none;">
+      <!-- 由 StudyEngine 動態注入拍立得卡片、題型練習與測驗 -->
+    </div>
+
+    <!-- 底部膠捲縮圖列 (Filmstrip Drawer - 52px/70px 微縮抽屜) -->
+    <footer class="filmstrip-drawer" id="filmstripDrawer">
+      <!-- 由 ReaderEngine 動態渲染 1~102 頁微縮圖 -->
+    </footer>
+  </div>
+
+  <!-- 核心腳本載入 -->
+  <script src="src/js/kitty-voice.js"></script>
+  <script src="src/js/reader-engine.js"></script>
+  <script src="src/js/study-engine.js"></script>
+  <script src="src/js/app.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(err => {
+          console.warn('SW registration skipped:', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

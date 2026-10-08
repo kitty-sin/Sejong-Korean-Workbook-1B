@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "korean-learning-1ec2a"
+  },
+  "targets": {
+    "korean-learning-1ec2a": {
+      "hosting": {
+        "sejong-workbook-1b": [
+          "sejong-workbook-1b-1ec2a"
+        ]
+      }
+    }
+  }
+}

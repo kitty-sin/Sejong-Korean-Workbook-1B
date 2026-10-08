@@ -1,0 +1,19 @@
+{
+  "name": "sejong-workbook-1b",
+  "version": "1.0.0",
+  "description": "King Sejong Institute Sejong Korean Workbook 1B Official E-Book & Interactive Learning System",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "sync:www": "powershell -Command \"robocopy . www /MIR /XD node_modules .git www scratch /XF .gitignore package.json package-lock.json; exit 0\""
+  },
+  "keywords": [
+    "korean",
+    "sejong-korean",
+    "workbook",
+    "e-book",
+    "pwa"
+  ],
+  "author": "kitty-sin",
+  "license": "MIT"
+}
