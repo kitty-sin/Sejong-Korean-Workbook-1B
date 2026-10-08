@@ -1,8 +1,11 @@
 # 🤝 世宗韓國語 練習冊 1B (Workbook 1B) 交接與進度備忘 (handoff.md)
 
-> **最後更新**：2026-10-07 18:01 (PT 太平洋時間 / 洛杉磯時間)  
+> **最後更新**：2026-10-07 18:03 (PT 太平洋時間 / 洛杉磯時間)  
 > **更新者**：Antigravity @ DESKTOP-PC  
-> **Git Push 狀態**：✅ 已推 (`main` -> `origin/main`)  
+> **三層級同步狀態**：  
+> - 🟢 **L1 本地**：✅ 已更新 (`AGENTS.md`, `handoff.md`, `README.md`, `www/` 鏡像)  
+> - 🟢 **L2 GitHub**：✅ 已推送 (`main` -> `origin/main`，Commit `0755581`)  
+> - 🟢 **L3 Obsidian**：✅ 已寫入 (`C:\Users\PC\Documents\Obsidian Vault\專案工作流程\Sejong-Korean-Workbook-1B.md`)  
 > **專案名稱**：世宗韓國語 練習冊 1B 官方原裝翻頁電子書與聽力點讀系統 (`Sejong-Korean-Workbook-1B`)  
 > **線上發布網址**：[https://sejong-workbook-1b-1ec2a.web.app](https://sejong-workbook-1b-1ec2a.web.app)  
 > **專案本地路徑**：`C:\Users\PC\Documents\Google-Antigravity\Korean-Study\Sejong Korean\Workbook 世宗韓國語練習冊\1B`
