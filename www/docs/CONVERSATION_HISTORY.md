@@ -166,3 +166,51 @@ The current local time is: 2026-10-07T13:18:23-07:00.
 
 ---
 
+### [2026-10-07T20:20:18Z] 🤖 助手 (Assistant / Antigravity)
+
+### 🎯 語音播放提示框《SPEECH_POPOVER_GOLD_SPEC.md》黃金標準全面校驗與落地
+
+語音播放提示框（Speech Popover）所有結構、樣式、狀態機與響應機制已全量對齊：
+
+---
+
+### 📋 黃金規範逐項核對 (Verification Checklist)
+
+| 規範項目 | 規範標準 | 1B 落地實作細節 | 狀態 |
+| :--- | :--- | :--- | :---: |
+| **視覺尺寸與樣式** | `min-width: 200px; max-width: min(340px, 85vw)`、毛玻璃 `rgba(255,255,255,0.98)`、圓角 12px、層級 `z-index: 999` | `overlay.css` 定義標準 `.speech-popover`，含細膩微陰影與彈入動效 | ✅ 達標 |
+| **頂部韓文與翻譯** | 韓文原句草莓粉加粗 `#FF5E7E` (`1.15rem`, `800`) + 臺灣正體說明 (`0.9rem`, `600`) | 標題文字與翻譯分層顯示，右側留空避免被關閉鈕遮擋 | ✅ 達標 |
+| **右上角關閉鈕** | 圓形 `20px`，懸停變粉紅底色與草莓粉字體 | `.popover-close-btn` 綁定 `closePopover()` 與冒泡阻斷 | ✅ 達標 |
+| **雙膠囊操作鈕** | **【⏸️ 暫停 / ▶️ 繼續】** 與 **【🔄 重播】** 雙膠囊風格按鈕 (`.popover-actions`) | 藍色小圖標方塊 + 狀態自動切換，暫停時呈現杏黃色警告光暈 (`.paused`) | ✅ 達標 |
+| **三段速標籤切換** | `0.3x`、`0.7x`、`1.0x`，預設帶有 `.active` 草莓粉高亮背景 | 初始化自動讀取當前語速並同步高亮，點擊即時變速與重播 | ✅ 達標 |
+| **智能方向定位** | 上半部 `y < 35%` ➔ `.pos-bottom`；下半部 `y >= 35%` ➔ `.pos-top` | 避免頂部導航列遮擋與底部溢出，小三角形指標自動隨方向翻轉 | ✅ 達標 |
+| **水平防裁切** | 最左側 `x < 25%` ➔ `.align-left`；最右側 `x > 60%` ➔ `.align-right` | 自動計算熱區水平座標，指標箭頭相應平移，手機端 100% 完整可見 | ✅ 達標 |
+| **底層引擎 API** | `pause()`、`resume()`、`playAudioFile()`、`onStateChange()` | `KittyVoiceEngine` 支援完整的音訊暫停、恢復與事件廣播 | ✅ 達標 |
+
+---
+
+### 🌐 線上部署驗證
+
+- **最新正式發布網址**：[https://sejong-workbook-1b-1ec2a.web.app](https://sejong-workbook-1b-1ec2a.web.app)
+- **Service Worker 版本**：升級至 `v1.0.1`，確保載入最新前端樣式與邏輯。
+- **本地歷程存檔**：
+  - 規格基準檔：[SPEECH_POPOVER_GOLD_SPEC.md](file:///c:/Users/PC/Documents/Google-Antigravity/Korean-Study/Sejong%20Korean/Workbook%20%E4%B8%96%E5%AE%97%E9%9F%93%E5%9C%8B%E8%AA%9E%E7%B7%B4%E7%BF%92%E5%86%8A/1B/SPEECH_POPOVER_GOLD_SPEC.md)
+  - 完整對話記錄：[CONVERSATION_HISTORY.md](file:///c:/Users/PC/Documents/Google-Antigravity/Korean-Study/Sejong%20Korean/Workbook%20%E4%B8%96%E5%AE%97%E9%9F%93%E5%9C%8B%E8%AA%9E%E7%B7%B4%E7%BF%92%E5%86%8A/1B/docs/CONVERSATION_HISTORY.md)
+  - 交接紀錄：[handoff.md](file:///c:/Users/PC/Documents/Google-Antigravity/Korean-Study/Sejong%20Korean/Workbook%20%E4%B8%96%E5%AE%97%E9%9F%93%E5%9C%8B%E8%AA%9E%E7%B7%B4%E7%BF%92%E5%86%8A/1B/handoff.md)
+
+---
+
+### [2026-10-07T22:57:54Z] 👤 使用者 (User)
+
+<USER_REQUEST>
+本專案的電子書語音播放與點讀提示列，請嚴格遵守 AUDIO_DOCK_GOLD_SPEC.md 規範實現：
+1. 實作「方案 A：固定底端迷你播放膠囊列（Mini Audio Dock）」，確保課本頁面內容 100% 零遮擋，禁止在原頁彈出大氣泡框遮蔽文字。
+2. 點讀時原頁熱區僅亮起綠色呼吸光暈（Pulse Glow），播放控制項（韓文原句、繁中釋義、暫停/繼續、重播、0.3x/0.7x/1.0x 三段速切換）統一由底端固定膠囊列呈現。
+3. 參考檔案路徑：AUDIO_DOCK_GOLD_SPEC.md
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-07T15:57:54-07:00.
+</ADDITIONAL_METADATA>
+
+---
+

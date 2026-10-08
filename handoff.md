@@ -1,14 +1,15 @@
 # 🤝 世宗韓國語 練習冊 1B (Workbook 1B) 交接與進度備忘 (handoff.md)
 
-> **更新時間**：2026-10-07 12:16 (PT 太平洋時間 / 洛杉磯時間)  
-> **專案名稱**：世宗韓國語 練習冊 1B 官方原裝翻頁電子書與聽力點讀系統  
+> **最後更新**：2026-10-07 17:56 (PT 太平洋時間 / 洛杉磯時間)  
+> **更新者**：Antigravity @ DESKTOP-PC  
+> **Git Push 狀態**：待推（進行收工推播中）  
+> **專案名稱**：世宗韓國語 練習冊 1B 官方原裝翻頁電子書與聽力點讀系統 (`Sejong-Korean-Workbook-1B`)  
 > **線上發布網址**：[https://sejong-workbook-1b-1ec2a.web.app](https://sejong-workbook-1b-1ec2a.web.app)  
 > **專案本地路徑**：`C:\Users\PC\Documents\Google-Antigravity\Korean-Study\Sejong Korean\Workbook 世宗韓國語練習冊\1B`
 
 ---
 
-## 📌 目前完成進度 (Completed)
-
+## ⏯️ 目前做到哪 (Where We Are)
 1. **原書高畫質圖資 (100% 完整)**：
    - 探測並確認世宗官方電子書端點為 `Dir=774`。
    - 下載全書 102 頁原版彩圖至 `src/assets/pages/001.jpg` ~ `102.jpg`。
@@ -43,6 +44,20 @@
 
 ---
 
-## 🚀 下一步建議 (Next Steps)
-1. 視需要將專案提交至 GitHub 遠端儲存庫。
-2. 可於 Android 實機透過 Capacitor 進行封裝測試。
+## 🚦 目前狀態 (Current Status)
+- ✅ PWA 翻頁電子書與音訊點讀已全面上線運行（正式站點可用）。
+- ✅ Service Worker 快取已升級至 `v1.0.2`。
+- ✅ 靜態鏡像已與 `www/` 同步。
+
+---
+
+## ➡️ 下一步 (Next Steps)
+1. 視需要配置 Capacitor 6.x 進行 Android APK 封裝測試。
+2. 評估是否擴充附錄解答頁或聽力文本頁的點讀熱區。
+3. 準備啟動下一本練習冊或進階課程教材。
+
+---
+
+## ⚠️ 注意事項 (Caveats)
+- **多站點保護鐵律**：後續部署請嚴格確認 `firebase.json` 指向 `"site": "sejong-workbook-1b-1ec2a"`，嚴禁裸推以防覆蓋主專案。
+- **練習冊乾淨版面**：熱區僅限官方配套之聽力原音檔，切勿導入課本的大量詞彙填滿練習格。

@@ -93,6 +93,7 @@ Sejong Korean/Workbook 世宗韓國語練習冊/1B/
 
 ### 3. 資料集與閱讀器引擎建置
 - [x] **結構化元資料**：建置 `src/data/book_meta.json` 包含 1~12 課及附錄目錄結構。
-- [x] **原頁聽力點讀熱區**：精確定位 12 個單元聽力頁面共 60 個題號熱區至 `src/data/hotspots.json`，呈現藍莓香芋紫光暈與 `🎧` 耳機。
+- [x] **原頁聽力點讀熱區**：精確定位 12 個單元聽力頁面共 60 個題號熱區至 `src/data/hotspots.json`，呈現藍莓香芋紫邊框與 `🎧` 耳機。
+- [x] **零遮擋固定底端迷你播放列 (Audio Dock)**：嚴格落實 `AUDIO_DOCK_GOLD_SPEC.md`，課本內容 100% 零遮擋，點讀熱區僅亮起綠色呼吸光暈（Pulse Glow `#10B981`），播放資訊、暫停/繼續、重播與 0.3x/0.7x/1.0x 語速統一由底端固定膠囊列呈現。
 - [x] **閱讀器核心與樣式**：完成符合黃金版面之翻頁引擎 `reader-engine.js`、三段速 `kitty-voice.js` 與樣式庫。
 - [x] **Firebase 獨立專屬站點部署**：建立專屬站點 `sejong-workbook-1b-1ec2a`，成功發布上線。
